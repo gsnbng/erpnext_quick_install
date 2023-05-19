@@ -117,11 +117,12 @@ sudo apt update
 sudo apt upgrade -y
 echo -e "${GREEN}System packages updated.${NC}"
 sleep 2
-
+echo -e "${YELLOW}Select "no" when you're asked for dash${NC}"
+sudo dpkg-reconfigure dash #Select "no" when you're asked
 #Now let's install a couple of requirements: git, curl and pip
 echo -e "${YELLOW}Installing preliminary package requirements${NC}"
 sleep 3
-sudo apt -qq install software-properties-common git curl -y
+sudo apt -qq install software-properties-common sudo cron lsb-release git curl  -y
 
 #Next we'll install the python environment manager...
 echo -e "${YELLOW}Installing python environment manager and other requirements...${NC}"
